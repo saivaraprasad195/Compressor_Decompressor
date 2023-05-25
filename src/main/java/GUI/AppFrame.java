@@ -27,26 +27,27 @@ public class AppFrame extends JFrame implements ActionListener {
     
     AppFrame()
     {
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setLayout(null);
         
         Compress = new JButton("Select File to Compress");
         Decompress =  new JButton ("Select File to Decompress");
         
-        Compress.setBounds(300,300,200,30);
-        Compress.setBackground(Color.white);
+        Compress.setBounds(30,120,200,30);
+        Compress.setBackground(Color.cyan);
         Compress.addActionListener(this);
         
-        Decompress.setBounds(600,300, 200, 30);
-        Decompress.setBackground(Color.white);
+        Decompress.setBounds(250,120, 200, 30);
+        Decompress.setBackground(Color.cyan);
         Decompress.addActionListener(this);
         
         
         this.setTitle("Compressor_Decompressor");
         this.add(Compress);
         this.add(Decompress);
-        this.setSize(800,800);
+        this.setSize(500,300);
         this.getContentPane().setBackground(Color.white);
         this.setVisible(true);
-        //this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
     @Override
